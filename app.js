@@ -19,3 +19,15 @@ function adicionarAmigo() {
 
     nomeInput.value = "";
 }
+
+// Função para atualizar a lista de amigos
+function atualizarLista() {
+    let lista = document.getElementById("listaAmigos"); 
+    lista.innerHTML = ""; 
+
+    amigos.forEach(nome => {
+        let li = document.createElement("li"); 
+        li.textContent = nome; 
+        lista.appendChild(li); 
+    });
+}
